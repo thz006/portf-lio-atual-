@@ -156,14 +156,19 @@ video {
   margin-top:10% ;
 }
 
+.dev-title{
+  font-size: 20px;
+}
+
 .about-content{
   line-height: 30px;
   flex-direction: column;
   width: 60%;
 }
 
-.about-content h2{
+.about-content h1{
   margin-bottom: 4%;
+  font-size: 35px;
 }
 
 .about-content p{
@@ -409,6 +414,7 @@ video {
   flex-direction: column;
   width: 100%; 
   padding: 2rem; /* Adiciona espaçamento interno */
+  gap: 50px;
 }
 
 .projects-title{
@@ -433,10 +439,54 @@ video {
   animation: slide-right 0.8s ease-out forwards;
 }
 
+.projects-content{
+  height: 200px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(45%);
+  border: 2px solid white;
+  border-radius: 2%;
+  opacity: 0; 
+  animation: slide-right 0.8s ease-out forwards;
+}
+
+.btn-mais{
+  border: 2px solid gray;
+  border-radius: 5%;
+  width: 40%;
+  height: 10%;
+  transform: translateX(-55%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-mais:hover{
+  background-color: green;
+  color: white;
+}
+
+.btn-mais a{
+  font-size: 10px;
+  text-decoration: none;
+  color: black;
+}
+
 .projects-content .img1{
   width: 12vw;
   height: 7vh;
   transform: translateX(40%);
+}
+
+.projects-content .img2{
+  width: 40%;
+  height: 70%;
+  display: flex;
+  transform: translateX(28%);
 }
 
 .projects-content p{
