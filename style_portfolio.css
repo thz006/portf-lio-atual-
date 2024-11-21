@@ -452,13 +452,15 @@ video {
   border-radius: 2%;
   opacity: 0; 
   animation: slide-right 0.8s ease-out forwards;
+  line-height: 1.4;
+  font-size: 16px;
 }
 
 .btn-mais{
-  border: 2px solid gray;
+  border: 2px solid rgb(160, 21, 21);
   border-radius: 5%;
   width: 40%;
-  height: 10%;
+  height: 22%;
   transform: translateX(-55%);
   display: flex;
   align-items: center;
@@ -468,12 +470,14 @@ video {
 .btn-mais:hover{
   background-color: green;
   color: white;
+  border-color: white;
 }
 
 .btn-mais a{
   font-size: 10px;
   text-decoration: none;
   color: black;
+  font-size: 600;
 }
 
 .projects-content .img1{
