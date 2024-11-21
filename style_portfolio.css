@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
 }
 
 .glass-header {
@@ -21,10 +22,28 @@
   /* animation: slide-down 0.8s ease-out forwards; */
 }
 
-body {
-  display: block; /* Remove o comportamento de layout flex */
+.profile-picture {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  border: 2px solid #fff;
+}
+
+/* Estilo da imagem dentro do círculo */
+.profile-picture img {
   width: 100%;
-  height: auto; /* Permite que a altura cresça conforme o conteúdo */
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir o círculo sem distorção */
+}
+
+body {
+  display: block;
+  width: 100%;
+  height: auto; 
 }
 
 section {
@@ -47,6 +66,22 @@ section {
   color: #ffffffb3;
   font-weight: bold;
   transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-links a:hover::after{
+  width: 100%;
 }
 
 .nav-links a:hover {
@@ -59,7 +94,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Mantém o vídeo atrás do conteúdo */
+  z-index: -1; 
   overflow: hidden;
 }
 
@@ -71,21 +106,21 @@ video {
 
 @keyframes fade-in {
   0% {
-    opacity: 0;  /* Invisível no início */
+    opacity: 0;  
   }
   100% {
-    opacity: 1;  /* Totalmente visível */
+    opacity: 1;  
   }
 }
 
 @keyframes slide-right {
   0% {
-    transform: translateX(-100px); /* Começa fora da tela, à esquerda */
-    opacity: 0; /* Invisível no início */
+    transform: translateX(-100px); 
+    opacity: 0; 
   }
   100% {
-    transform: translateX(0); /* Fica na posição normal */
-    opacity: 1; /* Totalmente visível */
+    transform: translateX(0); 
+    opacity: 1; 
   }
 }
 
@@ -111,9 +146,9 @@ video {
 #about {
   color: white;
   display: flex;
-  opacity: 0; /* Invisível inicialmente */
+  opacity: 0; 
   animation: slide-right 0.8s ease-out forwards;
-  width: 100%; /* Use toda a largura */
+  width: 100%; 
   padding: 2rem; /* Adiciona espaçamento interno */
   justify-content: center;
   align-items: center;
@@ -146,9 +181,9 @@ video {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%; /* Use toda a largura */
+  width: 100%; 
   padding: 2rem; /* Adiciona espaçamento interno */
-  opacity: 0; /* Invisível inicialmente */
+  opacity: 0;
   animation: fade-in 3s ease-out forwards;
 }
 
@@ -170,6 +205,23 @@ video {
   /* background-color: antiquewhite; */
   border-radius:15%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.skill-1::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  transform: translateY(4vh);
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.skill-1:hover::after{
+  width: 50%;
 }
 
 .skill-1 img{
@@ -177,12 +229,13 @@ video {
 }
 
 .skill-1:hover {
-  transform: scale(1.2); /* Aumenta o tamanho em 20% */
+  transform: scale(1.2); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Adiciona um efeito de sombra */
 }
 
 .skill-2{
   display: flex;
+  justify-content: center;
   width: 12vw;
   height: 12vh;
   border: 3px solid white;
@@ -191,8 +244,24 @@ video {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.skill-2::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  transform: translateY(4vh);
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.skill-2:hover::after{
+  width: 25%;
+}
+
 .skill-2:hover {
-  transform: scale(1.2); /* Aumenta o tamanho em 20% */
+  transform: scale(1.2); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Adiciona um efeito de sombra */
 }
 
@@ -203,6 +272,7 @@ video {
 .skill-3{
   display: flex;
   width: 12vw;
+  justify-content: center;
   height: 12vh;
   border: 3px solid white;
   /* background-color: antiquewhite; */
@@ -210,8 +280,24 @@ video {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.skill-3::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  transform: translateY(4vh);
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.skill-3:hover::after{
+  width: 50%;
+}
+
 .skill-3:hover {
-  transform: scale(1.2); /* Aumenta o tamanho em 20% */
+  transform: scale(1.2); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Adiciona um efeito de sombra */
 }
 
@@ -221,6 +307,7 @@ video {
 
 .skill-4{
   display: flex;
+  justify-content: center;
   width: 12vw;
   height: 12vh;
   border: 3px solid white;
@@ -229,12 +316,30 @@ video {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.skill-4::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  transform: translateY(4vh);
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.skill-4:hover::after{
+  width: 50%;
+}
+
 .skill-4:hover {
-  transform: scale(1.2); /* Aumenta o tamanho em 20% */
+  transform: scale(1.2); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Adiciona um efeito de sombra */
 }
 .skill-5{
   display: flex;
+  justify-content: center;
+  /* justify-content: center; */
   width: 12vw;
   height: 12vh;
   border: 3px solid white;
@@ -243,13 +348,31 @@ video {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.skill-5::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  transform: translateY(4vh);
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.skill-5:hover::after{
+  width: 35%;
+}
+
+
 .skill-5:hover {
-  transform: scale(1.2); /* Aumenta o tamanho em 20% */
+  transform: scale(1.2); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Adiciona um efeito de sombra */
 }
 
 .skill-6{
   display: flex;
+  justify-content: center;
   width: 12vw;
   height: 12vh;
   border: 3px solid white;
@@ -258,8 +381,24 @@ video {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.skill-6::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  transform: translateY(4vh);
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.skill-6:hover::after{
+  width: 10%;
+}
+
 .skill-6:hover {
-  transform: scale(1.2); /* Aumenta o tamanho em 20% */
+  transform: scale(1.2); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Adiciona um efeito de sombra */
 }
 
@@ -268,13 +407,13 @@ video {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%; /* Use toda a largura */
+  width: 100%; 
   padding: 2rem; /* Adiciona espaçamento interno */
 }
 
 .projects-title{
   color: white;
-  opacity: 0; /* Invisível inicialmente */
+  opacity: 0; 
   animation: slide-right 0.8s ease-out forwards;
   margin-bottom: 5%;
 }
@@ -290,7 +429,7 @@ video {
   transform: translateY(45%);
   border: 2px solid white;
   border-radius: 2%;
-  opacity: 0; /* Invisível inicialmente */
+  opacity: 0; 
   animation: slide-right 0.8s ease-out forwards;
 }
 
@@ -318,14 +457,14 @@ video {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%; /* Use toda a largura */
+  width: 100%; 
   padding: 2rem; /* Adiciona espaçamento interno */
   margin-bottom: 20%;
 }
 
 .education-title{
   color: white;
-  opacity: 0; /* Invisível inicialmente */
+  opacity: 0; 
   animation: slide-right 0.8s ease-out forwards;
   margin-bottom: 5%;
 }
@@ -333,7 +472,8 @@ video {
 .education-content{
   display: flex;
   flex-direction: row;
-
+  opacity: 0;
+  animation: slide-right 0.8s ease-out forwards;
   gap: 10%;
 }
 
@@ -375,7 +515,7 @@ video {
   width: 30%;
   height: 10%;
   background-color: #ffffff;
-  border-radius: 5%;
+  border-radius: 2%;
   transform: translatey(130%);
   display: flex;
   justify-content: center;
@@ -428,20 +568,57 @@ video {
   color: white;
   font-size: 90%;
   transform: translateY(-318%);
-  width: 200px;
+  width: 180px;
 }
+
 
 .period{
   color: white;
   padding-left: 9%;
   transform: translateY(-110%);
+  margin-right: 2%;
+  font-weight: 600;
 }
 
-.coming-soon{
-  color: white;
-  margin-left: 60%;
-  transform: translateY(-80%);
+.coming-soon {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  display: flex;
+  transform: translateY(10vh);
+  animation: fade-in 3s ease-out forwards;
 }
+.dots span {
+  display: inline-block;
+  opacity: 0;
+  animation: blink 1.5s infinite;
+}
+
+.dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dots span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dots span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
 
 #contact{
   width: 100%;
@@ -469,6 +646,13 @@ video {
   /* margin-right: 89vw; */
   /* margin-top: -3vh; */
   animation: slide-right 0.8s ease-out forwards;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+}
+
+.bottom1:hover{
+  transform: scale(1.2); 
+
 }
 
 .bottom2 a{
@@ -480,6 +664,11 @@ video {
   animation: slide-right 0.8s ease-out forwards;
 }
 
+.bottom2:hover{
+  transform: scale(1.2); 
+
+}
+
 .bottom3{
   color: white;
   font-size: 3vh;
@@ -487,6 +676,7 @@ video {
   /* margin-right: 74vw; */
   /* margin-top: 4vh; */
   animation: slide-right 0.8s ease-out forwards;
+  cursor: pointer;
 }
 
 .bottom4 a{
@@ -497,4 +687,42 @@ video {
   /* margin-top: 4vh; */
   /* margin-bottom: 3vh; */
   animation: slide-right 0.8s ease-out forwards;
+}
+
+.bottom4:hover{
+  transform: scale(1.2); 
+
+}
+
+.contact-h2{
+  color: white;
+  display: flex;
+  transform: translateY(55vh);
+  z-index: 11;
+}
+
+.bottom3 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  animation: fade-in-out 2s ease forwards;
+}
+
+@keyframes fade-in-out {
+  0% { opacity: 0; transform: translateY(10px); }
+  20%, 80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
 }

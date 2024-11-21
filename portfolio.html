@@ -6,6 +6,9 @@
   <title>Header com Fundo Vidro</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style_portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="video-container">
@@ -17,37 +20,38 @@
   <header class="glass-header">
     <nav>
       <ul class="nav-links">
-        <li ><a href="#about" class="li_1">Sobre Mim</a></li>
+        <li><a href="#about" class="li_1">Sobre Mim</a></li>
         <li><a href="#skills" class="li_2">Habilidades</a></li>
         <li><a href="#projects" class="li_3">Projetos</a></li>
         <li><a href="#education" class="li_4">Formação</a></li>
         <li><a href="#contact" class="li_5">Contato</a></li>
       </ul>
     </nav>
+     <!-- Foto de perfil -->
+     <div class="profile-picture">
+      <img src="img/WhatsApp Image 2024-11-03 at 21.23.00 (1).jpeg " alt="Foto de perfil">
+  </div>
   </header>
-
+  
   <section id="about">
     <div class="about-content">
       <h2 class="about-title">Olá, eu sou o Arthur</h2>
-      <p>Meu nome é Arthur, tenho 18 anos e atualmente estou cursando um técnico em Desenvolvimento de Sistemas. Sou facinado por tecnologia e pela ideia de criar soluções inovadoras que impactem positivamente o dia a dia das pessoas.
-
-        Estou constantemente me desafiando a aprender novas ferramentas e linguagens de programação, buscando me tornar um profissional completo e preparado para o mercado. Adoro trabalhar em projetos que envolvam criatividade, lógica e colaboração.
-          
-        Meu objetivo é crescer na área de desenvolvimento e contribuir para o avanço tecnológico, enquanto aprimoro minhas habilidades e construo uma carreira sólida. Sinta-se à vontade para explorar meu portfólio e conhecer mais sobre meu trabalho!
-        </p>
+      <p>Meu nome é Arthur, tenho 18 anos e atualmente estou cursando Técnico em Desenvolvimento de Sistemas. Sou facinado por tecnologia e pela ideia de criar soluções inovadoras que impactem positivamente o dia a dia das pessoas.</p>
+      <p>Estou constantemente me desafiando a aprender novas ferramentas e linguagens de programação, buscando me tornar um profissional completo e preparado para o mercado. Adoro trabalhar em projetos que envolvam criatividade, lógica e colaboração.</p>
+      <p>Meu objetivo é crescer na área de desenvolvimento e contribuir para o avanço tecnológico, enquanto aprimoro minhas habilidades e construo uma carreira sólida.</p>
     </div>  
   </section>
 
   <section id="skills">
-      <h2 class="skills-title">Habilidades</h2>
-      <div class="skills-content">
-        <div class="skill-1"><img src="img/icons8-python-96.png" alt=""></div>
-        <div class="skill-2"><img src="img/icons8-php-96.png  " alt=""></div>
-        <div class="skill-3"><img src="img/icons8-mysql-96.png" alt=""></div>
-        <div class="skill-4"><img src="img/icons8-html-96.png" alt=""></div>
-        <div class="skill-5"><img src="img/icons8-css-96.png" alt=""></div>
-        <div class="skill-6"><img src="img/icons8-js-96.png" alt=""></div>
-      </div>
+    <h2 class="skills-title">Habilidades</h2>
+    <div class="skills-content">
+      <div class="skill-1"><img src="img/icons8-python-96.png" alt=""></div>
+      <div class="skill-2"><img src="img/icons8-php-96.png  " alt=""></div>
+      <div class="skill-3"><img src="img/icons8-mysql-96.png" alt=""></div>
+      <div class="skill-4"><img src="img/icons8-html-96.png" alt=""></div>
+      <div class="skill-5"><img src="img/icons8-css-96.png" alt=""></div>
+      <div class="skill-6"><img src="img/icons8-js-96.png" alt=""></div>
+    </div>
   </section>
 
   <section id="projects">
@@ -57,7 +61,6 @@
       <div class="linha"></div>
       <p>Tweeb é um projeto e-commerce que estamos desenvolvendo ao longo do curso, trata-se de um e-commerce de informática, trabalhando com a venda de computadores completos, peças de hardware, acessórios, periféricos e muito mais, estou trabalhando na criação das telas, utilizando Html, Css, JavaScript e também estou ajudando na administração do repositório no GitHub.</p>
     </div>
-    <div class="botão"></div>
   </section>
 
   <section id="education">
@@ -70,7 +73,6 @@
           Março 2024 - Julho 2025
         <p class="period">
           Técnico em desenvolvimento de sistemas no Senac
-
         </p>
       </div>
       <div class="Cisco-1">
@@ -80,9 +82,13 @@
       </div>
     </div>
     <h2 class="coming-soon">
-      Coming soon ...
+      Coming Soon<span class="dots">
+        <span>.</span><span>.</span><span>.</span>
+      </span>
     </h2>
+    <h2 class="contact-h2">Redes Sociais e Contato</h2>
   </section>
+
   <div class="line-footer"></div>
   <footer id="contact">
     <div class="bottom1">
@@ -92,11 +98,30 @@
       <a href="https://www.instagram.com/thur_z0/"><i class="bi bi-instagram"></i></a>
     </div>
     <div class="bottom3">
-      <i class="bi bi-envelope"></i>
+      <i class="bi bi-envelope" id="email-icon"></i> 
     </div>
+    <span id="notification" style="display: none;">Endereço de e-mail copiado!</span>  
     <div class="bottom4">
       <a href="https://github.com/thz006"><i class="bi bi-github"></i></a>
     </div>
   </footer>
+
+  <script>
+    const emailIcon = document.querySelector('#email-icon');
+    const notification = document.querySelector('#notification');
+    const email = "arthursantorogomes92@gmail.com"; // Substitua pelo seu endereço de e-mail
+
+    emailIcon.addEventListener('click', () => {
+      navigator.clipboard.writeText(email).then(() => {
+        notification.style.display = 'block'; // Mostra a notificação
+        setTimeout(() => {
+          notification.style.display = 'none'; // Oculta a notificação após 2 segundos
+        }, 2000);
+      }).catch(err => {
+        console.error('Erro ao copiar o e-mail: ', err);
+      });
+    });
+  </script>
+  
 </body>
 </html>
